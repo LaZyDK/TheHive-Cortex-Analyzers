@@ -34,3 +34,6 @@ The format is made by looking at fields in a .nessus XML file, but can be used f
 | start_time               | Jan 6, 2020 @ 21:25:51.000                                                                                         | [vulnerability][custom][plugin][start_time]        |
 | svc_name                 | www                                                                                                                | [vulnerability][custom][service]                   |
 | synopsis                 | The remote web server is affected by a buffer overflow vulnerability.                                              | [vulnerability][custom][synopsis]                  |
+
+
+Screenshot of the long report is here: [Vulnerability Analyzer screenshot](https://github.com/LaZyDK/TheHive-Cortex-Analyzers/blob/master/Vulnerabilities/Screenshots/VulnerabilityAnalyzerPreview.jpg)
