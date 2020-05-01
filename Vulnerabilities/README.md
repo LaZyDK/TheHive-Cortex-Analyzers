@@ -1,7 +1,9 @@
 To make this analyzer work you need your vulnerability data in the following format, somewhat following Elastic Common Schema (ECS) version 1.5. 
 The format is made by looking at fields in a .nessus XML file, but can be used for all vulnerability data in an Elasticsearch 6.8 database.
 
-Screenshot of the long report is here: [Vulnerability Analyzer screenshot - Original size](https://github.com/LaZyDK/TheHive-Cortex-Analyzers/blob/master/Vulnerabilities/Screenshots/VulnerabilityAnalyzerPreview.jpg) - [Vulnerability Analyzer screenshot - 1080px](https://github.com/LaZyDK/TheHive-Cortex-Analyzers/blob/master/Vulnerabilities/Screenshots/VulnerabilityAnalyzerPreview_1080.jpg)
+Screenshot of the long report is here: 
+[Vulnerability Analyzer screenshot - Original size](https://github.com/LaZyDK/TheHive-Cortex-Analyzers/blob/master/Vulnerabilities/Screenshots/VulnerabilityAnalyzerPreview.jpg) 
+[Vulnerability Analyzer screenshot - 1080px](https://github.com/LaZyDK/TheHive-Cortex-Analyzers/blob/master/Vulnerabilities/Screenshots/VulnerabilityAnalyzerPreview_1080.jpg)
 
 
 | .nessus-file Fields      | Data                                                                                                               | ECS1.5 Fields + custom                             |
