@@ -47,7 +47,7 @@ class VulnerabilitiesAnalyzer(Analyzer):
         range = "now-"+str(self.scanrange)+"d"
         data = self.get_param('data', None, 'Data is missing')
         try:
-             res = self.client.search(index=self.index, body={"query":{"bool":{"must":[{"match":{self.fieldip:data}}],"filter":[{"range":{"@timestamp":{"gte":range}}}]}},"aggs":{"scans":{"filter":{"range":{"@timestamp":{"gte":range$
+             res = self.client.search(index=self.index, body={"query":{"bool":{"must":[{"match":{self.fieldip:data}}],"filter":[{"range":{"@timestamp":{"gte":range}}}]}},"aggs":{"scans":{"filter":{"range":{"@timestamp":{"gte":range}}},"aggs":{"scan_date":{"terms":{"field":self.fielddate}}}}},"size":1000})
         except Exception as e:
             self.unexpectedError(e)
             return
