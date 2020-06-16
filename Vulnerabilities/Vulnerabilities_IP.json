@@ -16,7 +16,7 @@
       "name": "host",
       "description": "Elasticsearch Hostname",
       "type": "string",
-      "multi": true,
+      "multi": false,
       "required": true,
       "defaultValue": "localhost"
     },
@@ -30,7 +30,7 @@
     },
     {
       "name": "https",
-      "description": "Communicate with Elasticsearch API using HTTP or HTTPS",
+      "description": "Should talk to Elasticsearch API using HTTP or HTTPS",
       "type": "boolean",
       "multi": false,
       "required": false,
@@ -38,7 +38,7 @@
     },
     {
       "name": "username",
-      "description": "Communicate with Elasticsearch API with this username",
+      "description": "Should talk to Elasticsearch API with this username",
       "type": "string",
       "multi": false,
       "required": false,
@@ -46,7 +46,7 @@
     },
     {
       "name": "password",
-      "description": "Communicate with Elasticsearch API with this password",
+      "description": "Should talk to Elasticsearch API with this password",
       "type": "string",
       "multi": false,
       "required": false,
@@ -56,16 +56,15 @@
       "name": "index",
       "description": "Define the Elasticsearch index to use",
       "type": "string",
-      "multi": false,
-      "required": true,
-      "defaultValue": "logstash*"
+      "multi": true,
+      "required": true
     },
     {
       "name": "scanrange",
       "description": "How many days back should we search for data",
       "type": "number",
       "multi": false,
-      "required": true, 
+      "required": true,
       "defaultValue": 14
     },
     {
@@ -88,8 +87,9 @@
       "type": "boolean",
       "multi": false,
       "required": true,
-      "defaultValue": true
-    },
+      "defaultValue": false
+    }
+    /*,
     {
       "name": "cert_path",
       "description": "Path to the CA on the system used to check server certificate",
@@ -97,5 +97,7 @@
       "multi": true,
       "required": false
     }
+    */
   ]
 }
+
