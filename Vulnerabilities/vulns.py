@@ -18,8 +18,8 @@ class VulnerabilitiesAnalyzer(Analyzer):
         self.index = self.get_param('config.index', None, 'Elasticsearch index is missing')
         self.username = self.get_param('config.username', 'elastic')
         self.password = self.get_param('config.password', 'changeme')
-        # optional
-        #self.verify = self.get_param('config.verifyssl', True, None)
+        self.cert_check = self.get_param('config.verifyssl', True, None)
+        self.cert_path = self.get_param('config.cert_path', None)
         self.client = None
         self.service = self.get_param('config.service', None, 'Service parameter is missing')
 
@@ -35,7 +35,7 @@ class VulnerabilitiesAnalyzer(Analyzer):
             self.https_auth = None
 
         try:
-            self.client = Elasticsearch(elasticsearch_array, use_ssl=self.https, http_auth=self.https_auth)
+            self.client = Elasticsearch(elasticsearch_array, use_ssl=self.https, http_auth=self.https_auth, verify_certs=self.cert_check, ca_certs=self.cert_path)
         except Exception as e:
             self.error("Elasticsearch is not available or wrong user/password", e)
             return
@@ -80,3 +80,4 @@ class VulnerabilitiesAnalyzer(Analyzer):
 
 if __name__ == '__main__':
     VulnerabilitiesAnalyzer().run()
+
