@@ -88,8 +88,7 @@
       "multi": false,
       "required": true,
       "defaultValue": false
-    }
-    /*,
+    },
     {
       "name": "cert_path",
       "description": "Path to the CA on the system used to check server certificate",
@@ -97,7 +96,6 @@
       "multi": true,
       "required": false
     }
-    */
   ]
 }
 
